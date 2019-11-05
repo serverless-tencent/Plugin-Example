@@ -1,0 +1,38 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: websitepage
+
+provider: # provider information
+  name: tencent
+  runtime: Python3.6 # Python3.6 or Python2.7
+  credentials: ~/credentials
+
+plugins:
+  - serverless-tencent-scf
+
+functions:
+  my_web_page:
+    handler: index.main_handler
+    description: Tencent Serverless Cloud Function
+    runtime: Python3.6 # Python3.6 or Python2.7
+    memorySize: 256
+    timeout: 10
+    events:
+      - apigw:
+          name: hello_world_apigw
+          parameters:
+            stageName: release
+            serviceId:
+            httpMethod: ANY
+            integratedResponse: true
