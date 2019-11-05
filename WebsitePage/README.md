@@ -20,7 +20,7 @@
 
 * 执行指令`npm install`安装必要的依赖
 
-* 执行`serverless deeploy`进行部署，部署成功可以看到以下信息：
+* 执行`serverless deploy`进行部署，部署成功可以看到以下信息：
 
 ```text
 Serverless: Packaging service...
@@ -41,3 +41,5 @@ functions:   my_web_page: websitepage-dev-my_web_page
     ANY - https://service-pcrn2ty8-1256773370.gz.apigw.tencentcs.com/release/websitepage-dev-my_web_page
 
 ```
+
+* 完成之后，可以打开返回的网页地址，看到对应的页面。
