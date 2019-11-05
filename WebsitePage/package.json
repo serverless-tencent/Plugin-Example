@@ -9,6 +9,9 @@
   "author": "cloud.tencent.com",
   "license": "MIT",
   "devDependencies": {
-    "serverless-tencent-scf": "^0.1.7"
+    "serverless-tencent-scf": "^0.2.0"
+  },
+  "dependencies": {
+    "npm-check-updates": "^3.2.0"
   }
 }
