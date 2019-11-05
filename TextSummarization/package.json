@@ -1,5 +1,5 @@
 {
-  "name": "websitepage",
+  "name": "textsummarization",
   "version": "1.0.0",
   "description": "Tencent Serverless Cloud Function example using Python",
   "main": "index.py",
