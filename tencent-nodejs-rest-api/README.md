@@ -21,7 +21,7 @@ $ npm install -g serverless
 通过如下命令直接下载该例子，目录结构如下：
 
 ```console
-serverless create --template-url 
+serverless create --template-url https://github.com/serverless-tencent/Plugin-Example/tree/master/tencent-nodejs-rest-api 
 ```
 
 ```
