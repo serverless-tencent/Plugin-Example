@@ -1,0 +1,52 @@
+service: plugin
+
+provider:
+  name: tencent
+  runtime: Python3.6
+  credentials: ~/credentials
+  region: ap-singapore
+
+plugins:
+  - serverless-tencent-scf
+
+functions:
+  user_action_search:
+    handler: user_action.student_get
+    description: Tencent Serverless Cloud Function
+    events:
+      - apigw:
+          name: user_action_apigw
+          parameters:
+            stageName: release
+            serviceId:
+            httpMethod: GET
+            path: /user/student/
+            enableCORS: true
+            serviceTimeout: 10
+  user_action_add:
+    handler: user_action.teacher_put
+    description: Tencent Serverless Cloud Function
+    events:
+      - apigw:
+          name: user_action.teacher
+          parameters:
+            stageName: release
+            serviceId:
+            httpMethod: PUT
+            path: /user/teacher/
+            enableCORS: true
+            serviceTimeout: 10
+  product_action:
+    handler: product_action.main_handler
+    description: Tencent Serverless Cloud Function
+    events:
+      - apigw:
+          name: product_action_apigw
+          parameters:
+            stageName: release
+            serviceId:
+            httpMethod: ANY
+            path: /product/
+            enableCORS: true
+            serviceTimeout: 10
+
