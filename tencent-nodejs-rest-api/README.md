@@ -185,6 +185,6 @@ $ curl -XGET http://service-9t28e0tg-1250000000.sg.apigw.tencentcs.com/release/p
 {"result": "it is product_get action"}
 ```
 
-#### 配置账户信息（可选）
+### 配置账户信息（可选）
 
 当前默认支持CLI扫描二维码登录，如您希望配置持久的环境变量/秘钥信息，也可以参考 [配置账号](https://github.com/serverless-tencent/serverless-tencent-scf/blob/master/docs/zh/%E9%85%8D%E7%BD%AE%E8%B4%A6%E5%8F%B7.md) 文档。
